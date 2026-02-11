@@ -13,7 +13,7 @@ def calcola_sconto():
        prezzo_finale = prezzo * 0.8  # Sconto 20%
        messaggio = f"Sconto applicato! Totale: {prezzo_finale}€"
    else:
-       messaggio = f"Nessun sconto. Totale: {prezzo}€"
+       messaggio ="Nessun sconto. Totale: {prezzo}€"
   
    # Aggiorniamo l'etichetta del risultato
    label_risultato.configure(text=messaggio, text_color="yellow")
@@ -26,7 +26,7 @@ app.geometry("400x350")
 # Elementi Grafici
 ctk.CTkLabel(app, text="Gestore Cassa Moderno", font=("Arial", 20, "bold")).pack(pady=20)
 entry_prezzo = ctk.CTkEntry(app, placeholder_text="Inserisci prezzo articolo...")
-entry_prezzo.pack(pady=10)
+entry_prezzo.pack(pady = 10)
 btn_calcola = ctk.CTkButton(app, text="Applica Sconto", command=calcola_sconto)
 btn_calcola.pack(pady=20)
 label_risultato = ctk.CTkLabel(app, text="In attesa di dati...", font=("Arial", 14))
